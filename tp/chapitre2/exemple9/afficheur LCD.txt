@@ -1,0 +1,19 @@
+def afficheur alphanumerique 
+il dif entre eux par le nombre de lignes (1,2,4) et nombre de char par ligne ( colomn)(8,16,20,40)
+mais le principe de fct reste le meme pour tous , leurs brochage est soit en ligne simple CILS , celui ci est constitué comme cela
+caracteristique des broche
+4) RS (register select)
+rs=0 , rs=1
+5)  S/w (read Write)
+ S/w=0 ecrire
+ S/w=1 
+6) EN (enable) entré de valiation active sur le front mntant avant toute transmition de donnees a front mntant
+7) D1 _ D7 : c est a 3 etat 
+
+a- mode 8 bits : avec ce mode tt les bits dont la donnee est codée sont transmises en mm temps
+b- mode 4 bits : avec ce mode tt les bits dont la donnee est codée sont transmises en deux etape , 4 premiers(d0d1d2d3) , faire un decalage a droite de 4puis transmetre le reste 
+ ) BL+ et bl- pas tout les afficheur dispose de ces broches leurs roles est d allumer les lede pour eclrage interne a travers une resistance de 45 a 100 ohm (bl+ vers 5v , bl- vers masse)
+
+ETAPE A SUIVRE
+importer la librerie par  #include 
+

@@ -1,0 +1,56 @@
+LES CERVOMOTEURS 
+
+ 1. Principe de fonctionnement d'un cervomoteur :
+
+pour faciliter la compréhension de son fonctionnement, on se réfère au schéma qui suit : 
+
+*insérer schéma du dessin (sur papier)
+
+un cervomteur possède 3 fils : 
+
+deux pour l'alimentation (+vcc et masse).
+un troisième destiné au signal de commande.
+
+le fonctionnement du cervomoteur est basé sur une boucle de retour (feed back) qui fonctionne comme suit : 
+le signal de commande est un signal PWM qui est convertis en tension moyenne.
+Cette tension estv l'entrée d'un amplificateur opérationnel monté en comparateur :  lorsque l'axe de sortie tourne, le potentiomètre qui est fix sur ce dernier tourne également. De ce fait la tension de sortie de ce potentiomètre varie en fonction de la rotation de l'axe de sortie. C'est à dire que cette tension dépend de l'angle ou de la position de l'axe de sortie qui est appliqué à la deuxième de l'amplificateur comparateur.
+De ce fait, on aura trois cas : si la tension de référence est supérieure à la tension de retour, la différence entres celles-ci est amplifiée et le moteur est alimenté par la sortie de l'amplificateur puis tourne dans un sens.
+Si la tension de référence est inférieure à la tension de retour le moteur tourne dans le sens opposé du cas précédent.
+Si les deux entrées sont identiques, la sortie de l'amplificateur est égale à 0 et le moteur s'arrete à cette position.
+
+Ainsi, la tension de référence détermine la position (angle) du moteur, ce dernier tourne jusqu'à ce que la position où l'angle souhaité doit atteint. (Vref=Vmoy) .Comme la tension de référence est la PWM, on peut avoir l'angle souhait sur l'axe de sortie. Pour ça, il suffit de faire varier le niveau haut par rapport au niveau bas. 
+
+Le couple d'un cervomoteur a pour Kg.cm. La formule qui suit exprime ce dernier : C = F.r
+C : (couple) en kilogramme par mètre
+F : force exercée sur le bras du cervomoteur (en kilogramme) 
+r : la distance (en mètres) à laquelle s'éxcèrce cette force par rapport à l'axe de rotation du cervomoteur
+Ex: un cervomoteur X qui peut fournir un couple de 4kg.cm peur soulever une charge de 4kg si le bras fait 1cm
+En revanche, pour un bras de 5cm, il ne pourra soulever qu'une force de 800g et pour un bras de 10cm la charge sera de 400g.
+La formule pour définir le poids maximum à une distance donnée : Pmax=Couple/distance
+ Remarque : ne surchargez pas les cervomoteurs.
+Lors de la surcharge d'un cervomoteur, la consommation de courant augmente énormément, si cet état se prolonge, cela risque de détruire notre moteur.
+eviter les contraintes mecaniques
+Proteger vos cer... contre les vibrations 
+
+-DIFFERENTS TYPES DES MOTEURS:
+Standard : Déplacement de 0 a 180 degés
+Arotation continu : ils tournent comme un moteur a courant continu  avec reducteurs, c'est l'impulsin de commande qui determine le sens et la vitese de rotation 
+Analogique avec signal feedback :  un signal analogique dependant  de la position du cer... permet de connaitre la position réelle de celle çi, ce signal permet d'ameliorer la precision et la stabilité. Le signal de retour analogique est disponible sur un 4eme fil.
+Application :
+ils sont utilisés la ou ca demande une forte precision et un couple important, de ce fait on les trouve dans la robotique, apprentissage de mouvement, enregistrement de position, controle des ailes d'avion, vane industriel.....
+
+3 commandes d'un cer...:
+elle se fait par pwm, les graphes ci dessous illustrent les principes de base de cette commande 
+
+
+
+
+
+
+
+
+
+
+
+
+

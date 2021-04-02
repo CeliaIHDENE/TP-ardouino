@@ -1,0 +1,6 @@
+1 - Diode : le role de cette diode est de decharger l'energie enmagasiné dans la bobine de relais vers l"alimentation cad :
+		quand une bobine est traversée par un courant celle ci emmagasine  des que ............ se decharge brusquement de ce fait lorsque le transistor est bloqué la bobine restitue l'energie................ cette restitution risque de deteriorer le transistor pour eviter cela, on place une diode 
+		de ce fait le courant trouve deux chemins
+			1- connecteur /emetteur donc la resistance est d'environ 100 mega ohm et la resistance de la diode ( resisrance dynamique ) qui de l'ordre de 0.7ohm qui est trés faible devant la resistance connecteur/emetteur ce qui oblige le courant a traverser la diode.
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+

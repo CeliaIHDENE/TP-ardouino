@@ -1,0 +1,7 @@
+Chaque base des 4 transistors est commandée par une porte AND et chacune a une entrée connectée a la proche ENA (enable), de ce fait si cette broche est portée a un niveau logique 0 , les sortis de ces 4 portes se bloquent sur un 0 logique quel que soit les états logique de leurs
+2eme entrée (broche) (in1 et in2), cette situation logique bloque les 4 transistors du pont H ,ce qui veut dire tout le pont H  est déconnecté ( desable) ce qui a pour effet de porter les sortie out1 et ou2, au niveau logique bas 
+
+
+
+ENAINA1INA2T1T2Out1Out2observation110saturébloqué+VCC0Moteur tourne  -->  sens1101bloquésaturé0+VCCMoteur tourne  -->  sens2100bloquébloqué00Moteur en arrêt 111saturésaturé+VCC+VCCMoteur en arrêt 0Xwbloquébloqué00Moteur en arrêt 
+

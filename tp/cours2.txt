@@ -1,0 +1,38 @@
+Moniteur serie arduino :
+
+
+- Il est utilisé pour la communication entre la carte arduino et un ordinateur ou d'autres péripherique toute les cartes arduino ont au moins un port serie ( egalement 	appelé URT ou USART).
+- Il communique sur les broches numériques 0(RX) et broche 1(TX) avec l'ordinateur via USB .
+- Si vous utilisez ce port série , vous ne pouvez pas utilisé les broches 0 et 1 comme entrée ou sortie numérique 
+
+- Vous pouvez utilisé le moniteru série integré dans l'environnement arduino pour communiquer avec la carte arduino.
+
+3 fonctions au minimum sont necessaires pour exploiter le moniteur série :
+
+	1 - Serial.begin(baud rate) : c'est une fonction qui donne l'ordre a la carte arduino de créer une liaison série avec l'ordinateur. ( fixe la vitesse )
+
+	comme une liaison serie de caractérise par une vitesse de transmission de données par seconde (baud rate);
+	on doit préciser la valeur de cette vitesse. ( 300 bit/s , 600 bit/s , 1 200bit/s , 2 400 bit/s , 4 800bit/s , 9 600bit/s , 14 400bit/s , 19 200bit/s , 28 800bit/s , 38 400bit/s , 57 600 bit/s ) (vitesse moyenne en génetal  9 600 bit /s )
+
+	2-  Serial.print() : cette fonction permet d'envoyer les données ou msg vers l'ordinateur tq :
+		Serial.print(11) envoie d'un chiffre 
+		Serial.print(1.6579) float
+		Serial.print('A') char
+		Serial.print("Hello world :D") string (chaine de caractere)
+
+	3- Serial.println() : même chose de que Serial.print() a part que celle ci permet de faire un saut a la ligne.
+	( transmettre qlq chose ) 
+
+- Autres fonctions necessaires port série :
+
+	1 - if(Serial): indique si le port série spécifié est prêt ( pour toute les cartes sauf méga)
+		pour la méga : if(Serial1) if(Serial2) if(Serial3)
+
+	2 - Serial.available() : importer le nombres d'octets (caractere) disponible pour la lecture a partir du port série.
+		il s'agit de données reçus et stockées dans le registre de reception du port série.
+			Pour toute les cartes : 
+				Arduino méga : Serial1.available()
+							   Serial2.available()
+							   Serial3.available()	 
+
+							 

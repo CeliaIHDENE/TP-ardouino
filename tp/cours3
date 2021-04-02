@@ -1,0 +1,10 @@
+les tableaux sont utilisés lorqsqu'on aura besoin de stocker des infos sans pour autant créer une variable pour chaque info
+
+exemple 2 :
+soit un tableau de 11 elements 
+declarer un compteur a 15 ( boucle 15 fois)
+affecter les valeurs de cet index au cases du tableau 
+afficher les valeurs sur le moniteur série
+
+-----------------------------------------------------------
+

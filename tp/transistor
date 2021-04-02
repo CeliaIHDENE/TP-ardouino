@@ -1,0 +1,41 @@
+/* Faire un programme qui permet de commander une lampe de 220 avec un seul btn push
+les microcontrolleurs des microprocessseaur ont une cmnde soit 0v ou 5v ce qui impossible pour commander les charges de 220v ou 380v la solution approté a ce problem est l'utilisation des c
+composants de puissance les relais , les triacs, les thyristore , les transistors IGBT
+
+Définitions :
+
+1- relais : une bobine alimenté par une tension contunue deviens siéege d'un champs magnetique uniforme ( elctro-aimant) 
+si on place unn metal féromagnetique, ce dernier est attiré vers la bobine .  De ce fait , on a crée un RELAIS !!!!!
+qui est consititué de : ( vori sur internet le schéma )
+A1 ET A2 sont les deux poles de la bobine ( branche d'alimentation ou bien tension d'excitation du relais donnée par le constructeur )
+3 bornes ( branches) nommées :
+- commun (c)
+- repos (r)
+- travail (t)
+si la bobine de ce relais n'est pas alimentée ,la broche coumun est relié a la broche repos par l'intermediaire d'une lame 
+par contre si la bobine du relais est alimentée, on dit que le relais est excité
+CAD : la lame cette fois ci relie la broche commun a labroche travaille, grace au champ magnétique de la bobine.
+Remarque : 
+1) il existe deux tyes de relais
+  - relais a tension continue 
+  - relais a tension alternative
+2) la carte arduino ou un microcontroller n'a pas un courant suffisant pour excité le relais, pour remedier a ce probleme on utilise a amplificateur de courant.
+le composant qui nous permet de realiser cette fonction est le TRANSISTOR !!!
+
+2- transistor : est un composant electronique a base de semi conducteur, constitué de 3 pattes :
+  - base
+  - emetteur
+  - collecteur
+il est utilisé dans :
+  1- amplification : c'est un operation qui consitue a amplifier la tension et le courant ou les deux d'un signal sans modifier l'allure de ce signal. 
+  2- commutation : dans ce cas le transistor se comporte comme un interrupteur ( amplificateur de courant )
+    CAD : si ve>=0.7 => VCE = 0v , Ic = Il ( load )
+          si ve = 0 => Ic = 0 , VCE = VCC 
+   si la tension d'entrée VE >= 0.7v le transistor fait passé un courant de + vcc vers la masse, ce courant depend de la charge L branché sur le connecteur.
+   si la tensuin d'entrée VE < 0.7 aucun courant ne traverse la charge, de ce fait la charge reste inactive.
+  3- oscillateur : est un montage electronique qui convertit une tension continue a une tension variable, ce montage peut etre réalise a l'aide d'ub transistor.
+  4- stabilisateur de tension : un transistor combiné avec une diode zener peut stabilisé une tension a une valeur bien stable ( schema )
+
+  
+             
+
